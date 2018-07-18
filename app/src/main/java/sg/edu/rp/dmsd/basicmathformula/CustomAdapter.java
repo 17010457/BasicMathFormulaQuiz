@@ -35,10 +35,12 @@ public class CustomAdapter extends ArrayAdapter {
         View rowView = inflater.inflate(layout_id, parent, false);
         TextView tvName = rowView.findViewById(R.id.tvName);
         TextView tvFormula = rowView.findViewById(R.id.tvFormula);
+        TextView tvType = rowView.findViewById(R.id.tvType);
 
         mathFormula currentItem = formulaList.get(position);
         tvName.setText(currentItem.getTvName());
         tvFormula.setText(currentItem.getTvFormula());
+        tvType.setText(currentItem.getTvType());
 
         return rowView;
     }
